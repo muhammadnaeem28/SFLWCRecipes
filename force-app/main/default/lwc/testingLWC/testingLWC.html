@@ -1,0 +1,30 @@
+<!-- helloExpressions.html -->
+<template>
+    <div class="slds-m-around_medium">
+        
+        <lightning-layout-item size="12" small-device-size="12" large-device-size={largePageSize}
+            medium-device-size="10" class="slds-m-top_large">
+            <lightning-layout>
+                <lightning-layout-item size="11">
+                    <lightning-input type="text" label="Enter Country Name" variant="label-hidden"
+                        placeholder="Enter Country Name"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="1">
+                    <lightning-button-icon icon-name="utility:search" alternative-text="search" title="Add todo"
+                        onclick={addTodoHandler}>
+                    </lightning-button-icon>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-layout-item>
+        
+       
+        
+        
+
+        
+
+    </div>
+    <div id="countries-list">
+        {countryDetails}
+    </div>
+</template>

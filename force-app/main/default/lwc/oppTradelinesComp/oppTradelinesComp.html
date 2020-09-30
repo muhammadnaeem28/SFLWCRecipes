@@ -1,0 +1,30 @@
+<template>
+<div >
+      
+        <lightning-accordion allow-multiple-sections-open 
+            active-section-name={activeSections}>
+            <lightning-button style="left: 192px;
+            position: absolute;
+            top: 5px;" 
+            variant="brand" label="Save Tradelines" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+
+            <lightning-accordion-section name="A" label="Eligible tradelines">
+            <lightning-datatable
+            data={eData}
+            columns={eColumns}
+            key-field="id"
+            onrowselection={getSelectedName}>
+            </lightning-datatable>
+            </lightning-accordion-section>
+            <lightning-accordion-section name="B" label="Ineligible tradelines">
+            <lightning-datatable
+            data={ineData}
+            columns={ineColumns}
+            key-field="id"
+            onrowselection={getSelectedName}>
+            </lightning-datatable>
+            </lightning-accordion-section>
+
+        </lightning-accordion>
+  </div>
+</template>
